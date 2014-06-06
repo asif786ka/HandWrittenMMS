@@ -39,7 +39,7 @@ public class HandWrittenView extends View {
 	private HashMap<Integer, Path> pathMap; // current Paths being drawn
 	private HashMap<Integer, Point> previousPointMap; // current Points
 
-	// DoodleView constructor initializes the DoodleView
+	// HandWrittenView constructor initializes the HandWrittenView
 	public HandWrittenView(Context context, AttributeSet attrs) {
 		super(context, attrs); // pass context to View's constructor
 		this.baseContext = context;
@@ -200,8 +200,8 @@ public class HandWrittenView extends View {
 
 	// save the current image to the Gallery
 	public void saveImage() {
-		// use "Doodlz" followed by current time as the image file name
-		String fileName = "Doodlz" + System.currentTimeMillis();
+		// use "HandWrittenView" followed by current time as the image file name
+		String fileName = "HandWrittenView" + System.currentTimeMillis();
 
 		// create a ContentValues and configure new image's data
 		ContentValues values = new ContentValues();
@@ -264,5 +264,5 @@ public class HandWrittenView extends View {
 		baseContext.startActivity(Intent.createChooser(shareIntent,
 				"Share image using"));
 	}
-} // end class DoodleView
+} // end class HandWrittenView
 
